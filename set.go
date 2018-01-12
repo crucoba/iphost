@@ -24,7 +24,7 @@ func setAlias(idx string, alias string) {
 	hostsPath := os.ExpandEnv("$SYSTEMROOT/System32/drivers/etc/hosts")
 	hosts, err4 := ioutil.ReadFile(hostsPath)
 	if err4 != nil {
-		println("No se puede leer hosts: ", err4)
+		println("Unable to read hosts file: ", err4)
 		os.Exit(3)
 	}
 
